@@ -217,12 +217,31 @@
       clear: both;
     }
   </style>
+  
+  <script>
+    function printAsPDF() {
+      // Hide the print button before printing
+      document.getElementById('printButton').style.display = 'none';
+      
+      // Trigger print dialog
+      window.print();
+      
+      // Show the button again after print dialog is closed
+      setTimeout(function() {
+        document.getElementById('printButton').style.display = 'block';
+      }, 1000);
+    }
+  </script>
 </head>
 <body>
   <!-- Watermark Logo -->
   <img src="https://raw.githubusercontent.com/mikecerisano/Investor/refs/heads/main/IMG_0069.png" alt="Red Fox Logo Watermark" class="watermark">
   
   <div class="container">
+    <button id="printButton" onclick="printAsPDF()" style="position: fixed; top: 20px; right: 20px; padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; z-index: 1000;">
+      Export to PDF
+    </button>
+    
     <div class="logo-header">
       <img src="https://raw.githubusercontent.com/mikecerisano/Investor/refs/heads/main/IMG_0069.png" alt="Red Fox Features Logo" class="logo-top">
     </div>
