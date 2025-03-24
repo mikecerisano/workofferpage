@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>Freelance Crew Agreement – Red Fox Features</title>
   <style>
     body {
@@ -10,7 +10,7 @@
       background-color: #ffffff;
       color: #333333;
       margin: 0;
-      padding: 30px;
+      padding: 15px;
       line-height: 1.5;
       font-size: 12pt;
       position: relative;
@@ -19,9 +19,19 @@
     .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 40px;
+      padding: 20px;
       position: relative;
       z-index: 1;
+    }
+    
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      .container {
+        padding: 15px;
+      }
     }
     
     .watermark {
@@ -157,6 +167,16 @@
       margin-left: 20px;
     }
     
+    @media screen and (max-width: 600px) {
+      .section-content {
+        margin-left: 10px;
+      }
+      
+      .subsection-content {
+        margin-left: 15px;
+      }
+    }
+    
     .signature-section {
       margin-top: 40px;
       page-break-inside: avoid;
@@ -208,6 +228,36 @@
       
       .editable {
         border-bottom: 1px solid #000;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 14pt;
+      }
+      
+      .editable {
+        min-width: 80px;
+        max-width: 100%;
+      }
+      
+      .signature-line, .signature-name {
+        width: 100%;
+      }
+      
+      .date-line, .date-text {
+        width: 60%;
+      }
+      
+      #printButton {
+        padding: 8px 12px;
+        font-size: 12px;
+        top: 10px;
+        right: 10px;
+      }
+      
+      .party-address, .party-designation {
+        padding: 0 10px;
       }
     }
 
@@ -298,11 +348,6 @@
         <div class="subsection clearfix">
           <div class="subsection-letter">(c)</div>
           <div class="subsection-content">The engagement period is scheduled for <span class="editable" contenteditable="true">[DATES]</span>.</div>
-        </div>
-        
-        <div class="subsection clearfix">
-          <div class="subsection-letter">(d)</div>
-          <div class="subsection-content">Call time each day will be <span class="editable" contenteditable="true">[CALL TIME]</span>, with an estimated wrap time of <span class="editable" contenteditable="true">[WRAP TIME]</span>.</div>
         </div>
       </div>
     </div>
