@@ -6,133 +6,277 @@
   <title>Freelance Crew Agreement – MIMIC</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
       margin: 0;
-      padding: 40px;
+      padding: 30px;
       line-height: 1.6;
+      font-size: 14px;
     }
-    h1, h2 {
-      color: #f8b400;
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #c11119;
+    }
+    
+    .logo {
+      max-width: 120px;
+      margin: 0 auto 15px;
+      display: block;
+    }
+    
+    h1 {
+      color: #c11119;
+      font-size: 24px;
+      margin-top: 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    h2 {
+      color: #c11119;
+      font-size: 18px;
+      margin-top: 25px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+    
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 25px;
     }
-    .section h2 {
-      border-bottom: 1px solid #444;
-      padding-bottom: 8px;
-    }
+    
     ul {
       list-style-type: disc;
       padding-left: 20px;
+      margin-top: 10px;
     }
-    .signature {
+    
+    li {
+      margin-bottom: 8px;
+    }
+    
+    .editable {
+      background-color: #f9f9f9;
+      padding: 3px 6px;
+      border: 1px dashed #ccc;
+      display: inline-block;
+      min-width: 100px;
+      font-weight: bold;
+    }
+    
+    .signature-section {
       margin-top: 40px;
+      page-break-inside: avoid;
     }
-    .signature p {
-      margin: 6px 0;
+    
+    .signatures {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    .signature-block {
+      width: 45%;
+      margin-bottom: 30px;
+    }
+    
+    .signature-line {
+      border-top: 1px solid #000;
+      margin-top: 70px;
+      padding-top: 5px;
+    }
+    
+    .title-line {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    
+    .date-line {
+      border-top: 1px solid #000;
+      margin-top: 30px;
+      padding-top: 5px;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 11px;
+      color: #777;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+    }
+    
+    @media print {
+      body {
+        padding: 0;
+      }
+      
+      .container {
+        border: none;
+        box-shadow: none;
+      }
+      
+      .editable {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Freelance Crew Agreement – MIMIC</h1>
+  <div class="container">
+    <div class="header">
+      <img src="https://raw.githubusercontent.com/mikecerisano/Investor/refs/heads/main/IMG_0069.png" alt="Red Fox Features Logo" class="logo">
+      <h1>Freelance Crew Agreement – MIMIC</h1>
+    </div>
 
-  <div class="section">
-    <h2>1. Investment & Ownership Terms</h2>
-    <p>1.1 The Crew Member agrees to provide services in the capacity of <strong>[ROLE]</strong> for the short film <strong>MIMIC</strong>.</p>
-    <p>1.2 The work will occur at <strong>278 Eldert Street, Brooklyn, NY 11207</strong>, unless otherwise stated.</p>
-    <p>1.3 The engagement period is scheduled for <strong>[DATES]</strong>.</p>
-  </div>
+    <div class="section">
+      <h2>1. Engagement Terms</h2>
+      <p>1.1 The Crew Member agrees to provide services in the capacity of <span class="editable" contenteditable="true">[ROLE]</span> for the short film <strong>MIMIC</strong>.</p>
+      <p>1.2 The work will occur at <strong>278 Eldert Street, Brooklyn, NY 11207</strong>, unless otherwise stated.</p>
+      <p>1.3 The engagement period is scheduled for <span class="editable" contenteditable="true">[DATES]</span>.</p>
+      <p>1.4 Call time each day will be <span class="editable" contenteditable="true">[CALL TIME]</span>, with an estimated wrap time of <span class="editable" contenteditable="true">[WRAP TIME]</span>.</p>
+    </div>
 
-  <div class="section">
-    <h2>2. Compensation</h2>
-    <ul>
-      <li>Flat Rate or Day Rate: $<strong>[RATE]</strong></li>
-      <li>Kit Fee (if applicable): $<strong>[KIT FEE]</strong></li>
-      <li>Payment due within <strong>[X days]</strong> after completion of services.</li>
-      <li>All reimbursements must be pre-approved in writing.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>2. Compensation</h2>
+      <ul>
+        <li>Flat Rate or Day Rate: $<span class="editable" contenteditable="true">[RATE]</span></li>
+        <li>Kit Fee (if applicable): $<span class="editable" contenteditable="true">[KIT FEE]</span></li>
+        <li>Payment due within <span class="editable" contenteditable="true">30</span> days after completion of services.</li>
+        <li>All reimbursements must be pre-approved in writing by a producer.</li>
+        <li>Payments will be made by <span class="editable" contenteditable="true">[PAYMENT METHOD]</span>.</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>3. Responsibilities</h2>
-    <ul>
-      <li>Perform tasks professionally and collaboratively.</li>
-      <li>Bring appropriate tools and gear unless provided by production.</li>
-      <li>Maintain hygiene and continuity for HMU/Wardrobe roles.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>3. Meals & Breaks</h2>
+      <ul>
+        <li>The production follows industry-standard meal break schedules (6 hours after call time).</li>
+        <li>A meal break of at least 30 minutes will be provided.</li>
+        <li>Reasonable short breaks will be provided throughout the working day.</li>
+        <li>Food and beverages will be provided during the shoot.</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>4. Ownership & Work-for-Hire</h2>
-    <ul>
-      <li>All services are considered work-for-hire for Red Fox Features LLC.</li>
-      <li>All rights to creative work produced are owned by the Production Company.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>4. Responsibilities</h2>
+      <ul>
+        <li>Crew Member will perform all tasks professionally and collaboratively.</li>
+        <li>Crew Member will bring appropriate tools and gear unless provided by production.</li>
+        <li>Crew Member will follow instructions from the director and department heads.</li>
+        <li>Crew Member will maintain continuity as required by their role.</li>
+        <li>Crew Member will arrive on time and prepared for each day of shooting.</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>5. Confidentiality</h2>
-    <p>No project materials or information may be disclosed or shared publicly without written permission from Red Fox Features LLC.</p>
-  </div>
+    <div class="section">
+      <h2>5. Credits</h2>
+      <p>5.1 The Crew Member will be credited in the film as: <span class="editable" contenteditable="true">[PREFERRED CREDIT NAME]</span></p>
+      <p>5.2 The Crew Member will be listed in the credits as <span class="editable" contenteditable="true">[ROLE]</span>.</p>
+      <p>5.3 Red Fox Features LLC reserves the right to determine credit placement and format.</p>
+    </div>
 
-  <div class="section">
-    <h2>6. Conduct & Safety</h2>
-    <ul>
-      <li>Professional behavior is expected at all times.</li>
-      <li>No harassment, discrimination, or unsafe behavior tolerated.</li>
-      <li>No alcohol or illegal substances on set.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>6. Ownership & Work-for-Hire</h2>
+      <ul>
+        <li>All services provided are considered work-for-hire for Red Fox Features LLC.</li>
+        <li>All intellectual property rights to creative work produced during the engagement belong exclusively to Red Fox Features LLC.</li>
+        <li>Crew Member expressly waives any and all rights that may conflict with this provision.</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>7. Cancellation & Termination</h2>
-    <ul>
-      <li>Less than 48 hours cancellation notice by crew may result in forfeited pay.</li>
-      <li>Production cancellation will result in prorated payment for work completed.</li>
-      <li>Cancellation fees may be agreed upon separately.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>7. Confidentiality</h2>
+      <p>7.1 No project materials, content, or information may be disclosed or shared publicly without written permission from Red Fox Features LLC.</p>
+      <p>7.2 This includes, but is not limited to, script content, plot details, casting information, behind-the-scenes footage, and production techniques.</p>
+      <p>7.3 Confidentiality obligations remain in effect indefinitely, even after completion of the project.</p>
+    </div>
 
-  <div class="section">
-    <h2>8. Insurance & Liability</h2>
-    <ul>
-      <li>Crew is responsible for their own insurance unless otherwise arranged.</li>
-      <li>Red Fox Features LLC is not liable for personal gear unless due to gross negligence.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>8. Conduct & Safety</h2>
+      <ul>
+        <li>Professional behavior is expected at all times on set.</li>
+        <li>No harassment, discrimination, or unsafe behavior will be tolerated.</li>
+        <li>No alcohol or illegal substances on set.</li>
+        <li>Safety concerns should be immediately reported to a producer or department head.</li>
+        <li>Crew Member must follow all safety protocols and instructions.</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>9. Use of Work</h2>
-    <ul>
-      <li>All footage remains the property of the production.</li>
-      <li>Any use of materials for personal reels requires written approval.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>9. Cancellation & Termination</h2>
+      <ul>
+        <li>Cancellation by Crew Member with less than 48 hours notice may result in forfeited compensation.</li>
+        <li>Production cancellation will result in prorated payment for work completed.</li>
+        <li>Red Fox Features LLC reserves the right to terminate the agreement for unprofessional conduct, safety violations, or failure to perform duties.</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>10. Governing Law</h2>
-    <p>This agreement is governed by the laws of the State of New York.</p>
-  </div>
+    <div class="section">
+      <h2>10. Insurance & Liability</h2>
+      <ul>
+        <li>Crew Member is responsible for their own insurance coverage unless otherwise arranged.</li>
+        <li>Red Fox Features LLC is not liable for damage to or loss of personal gear unless due to gross negligence by production.</li>
+        <li>Crew Member assumes all risks associated with their presence on set.</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>11. Entire Agreement</h2>
-    <p>This document is the complete understanding between both parties. Any changes must be in writing and signed by both parties.</p>
-  </div>
+    <div class="section">
+      <h2>11. Use of Work</h2>
+      <ul>
+        <li>All footage, photographs, and other materials created remain the property of Red Fox Features LLC.</li>
+        <li>Crew Member may request permission to use materials for their personal reel or portfolio.</li>
+        <li>Such use must be approved in writing and may only occur after the film's official release.</li>
+      </ul>
+    </div>
 
-  <div class="signature">
-    <p><strong>Crew Member:</strong></p>
-    <p>Name: ___________________________</p>
-    <p>Signature: ________________________</p>
-    <p>Date: ____________________________</p>
+    <div class="section">
+      <h2>12. Governing Law</h2>
+      <p>This agreement is governed by the laws of the State of New York.</p>
+    </div>
 
-    <br />
+    <div class="section">
+      <h2>13. Entire Agreement</h2>
+      <p>This document constitutes the complete understanding between both parties. Any changes must be made in writing and signed by both parties.</p>
+    </div>
 
-    <p><strong>Red Fox Features LLC (Producer):</strong></p>
-    <p>Name: ___________________________</p>
-    <p>Signature: ________________________</p>
-    <p>Date: ____________________________</p>
+    <div class="signature-section">
+      <div class="signatures">
+        <div class="signature-block">
+          <h3>Crew Member:</h3>
+          <div class="signature-line">Signature</div>
+          <p class="title-line">Name: <span class="editable" contenteditable="true">___________________________</span></p>
+          <p>Phone: <span class="editable" contenteditable="true">___________________________</span></p>
+          <p>Email: <span class="editable" contenteditable="true">___________________________</span></p>
+          <div class="date-line">Date</div>
+        </div>
+        
+        <div class="signature-block">
+          <h3>Red Fox Features LLC (Producer):</h3>
+          <div class="signature-line">Signature</div>
+          <p class="title-line">Name: <span class="editable" contenteditable="true">___________________________</span></p>
+          <p>Title: <span class="editable" contenteditable="true">___________________________</span></p>
+          <div class="date-line">Date</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Red Fox Features LLC | This document is confidential and intended only for the parties involved.</p>
+    </div>
   </div>
 </body>
 </html>
