@@ -6,73 +6,130 @@
   <title>Freelance Crew Agreement – MIMIC</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Times New Roman', Times, serif;
       background-color: #ffffff;
       color: #333333;
       margin: 0;
       padding: 30px;
-      line-height: 1.6;
-      font-size: 14px;
+      line-height: 1.5;
+      font-size: 12pt;
     }
     
     .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 20px;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 40px;
     }
     
     .header {
       text-align: center;
-      margin-bottom: 20px;
-      padding-bottom: 15px;
-      border-bottom: 2px solid #c11119;
+      margin-bottom: 30px;
     }
     
-    .logo {
-      max-width: 120px;
-      margin: 0 auto 15px;
-      display: block;
+    .small-text {
+      font-size: 9pt;
+      font-style: italic;
+      color: #666;
+      text-align: center;
+      margin-bottom: 20px;
     }
     
     h1 {
-      color: #c11119;
-      font-size: 24px;
-      margin-top: 0;
+      text-align: center;
+      font-size: 16pt;
+      font-weight: bold;
+      margin-bottom: 30px;
       text-transform: uppercase;
-      letter-spacing: 1px;
     }
     
-    h2 {
-      color: #c11119;
-      font-size: 18px;
-      margin-top: 25px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #ddd;
+    .agreement-intro {
+      margin-bottom: 20px;
+    }
+    
+    .party-section {
+      margin-bottom: 30px;
+    }
+    
+    .between-text {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .party-name {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    
+    .party-address {
+      text-align: center;
+      font-size: 10pt;
+      color: #666;
+      margin-bottom: 15px;
+    }
+    
+    .party-designation {
+      text-align: center;
+      font-weight: bold;
+      font-size: 10pt;
+      margin-bottom: 15px;
+    }
+    
+    .and-separator {
+      text-align: center;
+      margin: 15px 0;
+    }
+    
+    .recitals {
+      margin-bottom: 20px;
+    }
+    
+    .recitals-heading {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .whereas {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+    
+    .agreement-clause {
+      text-align: center;
+      margin: 20px 0;
+      font-weight: bold;
     }
     
     .section {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
     
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-    
-    li {
-      margin-bottom: 8px;
-    }
-    
-    .editable {
-      background-color: #f9f9f9;
-      padding: 3px 6px;
-      border: 1px dashed #ccc;
-      display: inline-block;
-      min-width: 100px;
+    .section-number {
       font-weight: bold;
+      float: left;
+      margin-right: 10px;
+    }
+    
+    .section-title {
+      font-weight: bold;
+    }
+    
+    .section-content {
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    
+    .subsection {
+      margin-bottom: 10px;
+    }
+    
+    .subsection-letter {
+      float: left;
+      margin-right: 10px;
+    }
+    
+    .subsection-content {
+      display: block;
+      margin-left: 20px;
     }
     
     .signature-section {
@@ -80,41 +137,39 @@
       page-break-inside: avoid;
     }
     
-    .signatures {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    
-    .signature-block {
-      width: 45%;
+    .signature-party {
       margin-bottom: 30px;
     }
     
     .signature-line {
       border-top: 1px solid #000;
-      margin-top: 70px;
-      padding-top: 5px;
+      width: 80%;
+      margin: 60px auto 5px;
     }
     
-    .title-line {
-      margin-top: 5px;
-      font-weight: bold;
+    .signature-name {
+      width: 80%;
+      margin: 5px auto;
+      font-size: 10pt;
     }
     
     .date-line {
       border-top: 1px solid #000;
-      margin-top: 30px;
-      padding-top: 5px;
+      width: 40%;
+      margin: 40px auto 5px;
     }
     
-    .footer {
+    .date-text {
+      width: 40%;
+      margin: 5px auto;
+      font-size: 10pt;
       text-align: center;
-      margin-top: 30px;
-      font-size: 11px;
-      color: #777;
-      border-top: 1px solid #ddd;
-      padding-top: 15px;
+    }
+    
+    .editable {
+      border-bottom: 1px dotted #aaa;
+      min-width: 100px;
+      display: inline-block;
     }
     
     @media print {
@@ -123,159 +178,390 @@
       }
       
       .container {
-        border: none;
-        box-shadow: none;
+        padding: 0;
       }
       
       .editable {
-        background-color: transparent;
-        border: none;
-        padding: 0;
+        border-bottom: 1px solid #000;
       }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <img src="https://raw.githubusercontent.com/mikecerisano/Investor/refs/heads/main/IMG_0069.png" alt="Red Fox Features Logo" class="logo">
-      <h1>Freelance Crew Agreement – MIMIC</h1>
+    <div class="small-text">This agreement is for the production of a short film.</div>
+    
+    <h1>FREELANCE CREW AGREEMENT</h1>
+    
+    <div class="agreement-intro">
+      THIS AGREEMENT made effective as of the <span class="editable" contenteditable="true">____</span> day of <span class="editable" contenteditable="true">____________</span>, <span class="editable" contenteditable="true">______</span>,
     </div>
-
-    <div class="section">
-      <h2>1. Engagement Terms</h2>
-      <p>1.1 The Crew Member agrees to provide services in the capacity of <span class="editable" contenteditable="true">[ROLE]</span> for the short film <strong>MIMIC</strong>.</p>
-      <p>1.2 The work will occur at <strong>278 Eldert Street, Brooklyn, NY 11207</strong>, unless otherwise stated.</p>
-      <p>1.3 The engagement period is scheduled for <span class="editable" contenteditable="true">[DATES]</span>.</p>
-      <p>1.4 Call time each day will be <span class="editable" contenteditable="true">[CALL TIME]</span>, with an estimated wrap time of <span class="editable" contenteditable="true">[WRAP TIME]</span>.</p>
+    
+    <div class="party-section">
+      <div class="between-text">BETWEEN:</div>
+      
+      <div class="party-name">RED FOX FEATURES LLC</div>
+      <div class="party-address"><span class="editable" contenteditable="true">[address]</span></div>
+      <div class="party-designation">("PRODUCTION COMPANY")</div>
+      
+      <div class="and-separator">- and -</div>
+      
+      <div class="party-name"><span class="editable" contenteditable="true">[NAME OF CREW MEMBER]</span></div>
+      <div class="party-address"><span class="editable" contenteditable="true">[address]</span></div>
+      <div class="party-designation">("CREW MEMBER")</div>
     </div>
-
-    <div class="section">
-      <h2>2. Compensation</h2>
-      <ul>
-        <li>Flat Rate or Day Rate: $<span class="editable" contenteditable="true">[RATE]</span></li>
-        <li>Kit Fee (if applicable): $<span class="editable" contenteditable="true">[KIT FEE]</span></li>
-        <li>Payment due within <span class="editable" contenteditable="true">30</span> days after completion of services.</li>
-        <li>All reimbursements must be pre-approved in writing by a producer.</li>
-        <li>Payments will be made by <span class="editable" contenteditable="true">[PAYMENT METHOD]</span>.</li>
-      </ul>
+    
+    <div class="recitals">
+      <div class="recitals-heading">RECITALS:</div>
+      
+      <div class="whereas">WHEREAS PRODUCTION COMPANY is producing a short film entitled "MIMIC" (the "Film");</div>
+      
+      <div class="whereas">AND WHEREAS CREW MEMBER wishes to provide services as <span class="editable" contenteditable="true">[ROLE]</span> for the Film;</div>
+      
+      <div class="whereas">AND WHEREAS PRODUCTION COMPANY wishes to engage CREW MEMBER to provide such services;</div>
     </div>
-
-    <div class="section">
-      <h2>3. Meals & Breaks</h2>
-      <ul>
-        <li>The production follows industry-standard meal break schedules (6 hours after call time).</li>
-        <li>A meal break of at least 30 minutes will be provided.</li>
-        <li>Reasonable short breaks will be provided throughout the working day.</li>
-        <li>Food and beverages will be provided during the shoot.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>4. Responsibilities</h2>
-      <ul>
-        <li>Crew Member will perform all tasks professionally and collaboratively.</li>
-        <li>Crew Member will bring appropriate tools and gear unless provided by production.</li>
-        <li>Crew Member will follow instructions from the director and department heads.</li>
-        <li>Crew Member will maintain continuity as required by their role.</li>
-        <li>Crew Member will arrive on time and prepared for each day of shooting.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>5. Credits</h2>
-      <p>5.1 The Crew Member will be credited in the film as: <span class="editable" contenteditable="true">[PREFERRED CREDIT NAME]</span></p>
-      <p>5.2 The Crew Member will be listed in the credits as <span class="editable" contenteditable="true">[ROLE]</span>.</p>
-      <p>5.3 Red Fox Features LLC reserves the right to determine credit placement and format.</p>
-    </div>
-
-    <div class="section">
-      <h2>6. Ownership & Work-for-Hire</h2>
-      <ul>
-        <li>All services provided are considered work-for-hire for Red Fox Features LLC.</li>
-        <li>All intellectual property rights to creative work produced during the engagement belong exclusively to Red Fox Features LLC.</li>
-        <li>Crew Member expressly waives any and all rights that may conflict with this provision.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>7. Confidentiality</h2>
-      <p>7.1 No project materials, content, or information may be disclosed or shared publicly without written permission from Red Fox Features LLC.</p>
-      <p>7.2 This includes, but is not limited to, script content, plot details, casting information, behind-the-scenes footage, and production techniques.</p>
-      <p>7.3 Confidentiality obligations remain in effect indefinitely, even after completion of the project.</p>
-    </div>
-
-    <div class="section">
-      <h2>8. Conduct & Safety</h2>
-      <ul>
-        <li>Professional behavior is expected at all times on set.</li>
-        <li>No harassment, discrimination, or unsafe behavior will be tolerated.</li>
-        <li>No alcohol or illegal substances on set.</li>
-        <li>Safety concerns should be immediately reported to a producer or department head.</li>
-        <li>Crew Member must follow all safety protocols and instructions.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>9. Cancellation & Termination</h2>
-      <ul>
-        <li>Cancellation by Crew Member with less than 48 hours notice may result in forfeited compensation.</li>
-        <li>Production cancellation will result in prorated payment for work completed.</li>
-        <li>Red Fox Features LLC reserves the right to terminate the agreement for unprofessional conduct, safety violations, or failure to perform duties.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>10. Insurance & Liability</h2>
-      <ul>
-        <li>Crew Member is responsible for their own insurance coverage unless otherwise arranged.</li>
-        <li>Red Fox Features LLC is not liable for damage to or loss of personal gear unless due to gross negligence by production.</li>
-        <li>Crew Member assumes all risks associated with their presence on set.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>11. Use of Work</h2>
-      <ul>
-        <li>All footage, photographs, and other materials created remain the property of Red Fox Features LLC.</li>
-        <li>Crew Member may request permission to use materials for their personal reel or portfolio.</li>
-        <li>Such use must be approved in writing and may only occur after the film's official release.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>12. Governing Law</h2>
-      <p>This agreement is governed by the laws of the State of New York.</p>
-    </div>
-
-    <div class="section">
-      <h2>13. Entire Agreement</h2>
-      <p>This document constitutes the complete understanding between both parties. Any changes must be made in writing and signed by both parties.</p>
-    </div>
-
-    <div class="signature-section">
-      <div class="signatures">
-        <div class="signature-block">
-          <h3>Crew Member:</h3>
-          <div class="signature-line">Signature</div>
-          <p class="title-line">Name: <span class="editable" contenteditable="true">___________________________</span></p>
-          <p>Phone: <span class="editable" contenteditable="true">___________________________</span></p>
-          <p>Email: <span class="editable" contenteditable="true">___________________________</span></p>
-          <div class="date-line">Date</div>
+    
+    <div class="agreement-clause">NOW THEREFORE THIS AGREEMENT WITNESSES that in consideration of the mutual covenants and agreements contained in this Agreement, the parties hereto agree as follows:</div>
+    
+    <div class="section clearfix">
+      <div class="section-number">1.</div>
+      <div class="section-title">Engagement and Services</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">PRODUCTION COMPANY hereby engages CREW MEMBER to provide services in the capacity of <span class="editable" contenteditable="true">[ROLE]</span> for the Film, and CREW MEMBER hereby accepts such engagement.</div>
         </div>
         
-        <div class="signature-block">
-          <h3>Red Fox Features LLC (Producer):</h3>
-          <div class="signature-line">Signature</div>
-          <p class="title-line">Name: <span class="editable" contenteditable="true">___________________________</span></p>
-          <p>Title: <span class="editable" contenteditable="true">___________________________</span></p>
-          <div class="date-line">Date</div>
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">The services shall be performed at 278 Eldert Street, Brooklyn, NY 11207, unless otherwise specified by PRODUCTION COMPANY.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">The engagement period is scheduled for <span class="editable" contenteditable="true">[DATES]</span>.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(d)</div>
+          <div class="subsection-content">Call time each day will be <span class="editable" contenteditable="true">[CALL TIME]</span>, with an estimated wrap time of <span class="editable" contenteditable="true">[WRAP TIME]</span>.</div>
         </div>
       </div>
     </div>
     
-    <div class="footer">
-      <p>Red Fox Features LLC | This document is confidential and intended only for the parties involved.</p>
+    <div class="section clearfix">
+      <div class="section-number">2.</div>
+      <div class="section-title">Compensation</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">PRODUCTION COMPANY shall pay CREW MEMBER a flat rate or day rate of $<span class="editable" contenteditable="true">[RATE]</span>.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">Kit Fee (if applicable): $<span class="editable" contenteditable="true">[KIT FEE]</span>.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">Payment shall be due within <span class="editable" contenteditable="true">30</span> days after completion of services.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(d)</div>
+          <div class="subsection-content">All reimbursements must be pre-approved in writing by a producer.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(e)</div>
+          <div class="subsection-content">Payments will be made by <span class="editable" contenteditable="true">[PAYMENT METHOD]</span>.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">3.</div>
+      <div class="section-title">Meals and Breaks</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">The production follows industry-standard meal break schedules (meal break no later than 6 hours after call time).</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">A meal break of at least 30 minutes will be provided.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">Reasonable short breaks will be provided throughout the working day.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(d)</div>
+          <div class="subsection-content">Food and beverages will be provided during the shoot.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">4.</div>
+      <div class="section-title">Responsibilities</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">CREW MEMBER shall perform all tasks professionally and collaboratively.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">CREW MEMBER shall bring appropriate tools and gear unless provided by production.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">CREW MEMBER shall follow instructions from the director and department heads.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(d)</div>
+          <div class="subsection-content">CREW MEMBER shall maintain continuity as required by their role.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(e)</div>
+          <div class="subsection-content">CREW MEMBER shall arrive on time and prepared for each day of shooting.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">5.</div>
+      <div class="section-title">Credits</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">CREW MEMBER will be credited in the Film as: <span class="editable" contenteditable="true">[PREFERRED CREDIT NAME]</span>.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">CREW MEMBER will be listed in the credits as <span class="editable" contenteditable="true">[ROLE]</span>.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">PRODUCTION COMPANY reserves the right to determine credit placement and format.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">6.</div>
+      <div class="section-title">Ownership and Work-for-Hire</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">All services provided by CREW MEMBER are considered work-for-hire for PRODUCTION COMPANY.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">All intellectual property rights to creative work produced during the engagement belong exclusively to PRODUCTION COMPANY.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">CREW MEMBER expressly waives any and all rights that may conflict with this provision.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">7.</div>
+      <div class="section-title">Confidentiality</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">No project materials, content, or information may be disclosed or shared publicly without written permission from PRODUCTION COMPANY.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">This includes, but is not limited to, script content, plot details, casting information, behind-the-scenes footage, and production techniques.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">Confidentiality obligations remain in effect indefinitely, even after completion of the project.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">8.</div>
+      <div class="section-title">Conduct and Safety</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">Professional behavior is expected at all times on set.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">No harassment, discrimination, or unsafe behavior will be tolerated.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">No alcohol or illegal substances on set.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(d)</div>
+          <div class="subsection-content">Safety concerns should be immediately reported to a producer or department head.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(e)</div>
+          <div class="subsection-content">CREW MEMBER must follow all safety protocols and instructions.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">9.</div>
+      <div class="section-title">Cancellation and Termination</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">Cancellation by CREW MEMBER with less than 48 hours notice may result in forfeited compensation.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">Production cancellation will result in prorated payment for work completed.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">PRODUCTION COMPANY reserves the right to terminate the agreement for unprofessional conduct, safety violations, or failure to perform duties.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">10.</div>
+      <div class="section-title">Insurance and Liability</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">CREW MEMBER is responsible for their own insurance coverage unless otherwise arranged.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">PRODUCTION COMPANY is not liable for damage to or loss of personal gear unless due to gross negligence by production.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">CREW MEMBER assumes all risks associated with their presence on set.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">11.</div>
+      <div class="section-title">Use of Work</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">All footage, photographs, and other materials created remain the property of PRODUCTION COMPANY.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(b)</div>
+          <div class="subsection-content">CREW MEMBER may request permission to use materials for their personal reel or portfolio.</div>
+        </div>
+        
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(c)</div>
+          <div class="subsection-content">Such use must be approved in writing and may only occur after the Film's official release.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">12.</div>
+      <div class="section-title">Governing Law</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">This agreement is governed by the laws of the State of New York.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section clearfix">
+      <div class="section-number">13.</div>
+      <div class="section-title">Entire Agreement</div>
+      
+      <div class="section-content">
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(a)</div>
+          <div class="subsection-content">This document constitutes the complete understanding between both parties. Any changes must be made in writing and signed by both parties.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="signature-section">
+      <div class="agreement-clause">IN WITNESS WHEREOF the parties have executed this Agreement as of the date first above written.</div>
+      
+      <div class="signature-party">
+        <div class="party-name">RED FOX FEATURES LLC</div>
+        
+        <div class="signature-line"></div>
+        <div class="signature-name">Per: <span class="editable" contenteditable="true">____________________________</span></div>
+        <div class="signature-name">Name: <span class="editable" contenteditable="true">____________________________</span></div>
+        <div class="signature-name">Title: <span class="editable" contenteditable="true">____________________________</span></div>
+        
+        <div class="date-line"></div>
+        <div class="date-text">Date</div>
+      </div>
+      
+      <div class="signature-party">
+        <div class="party-name"><span class="editable" contenteditable="true">[CREW MEMBER NAME]</span></div>
+        
+        <div class="signature-line"></div>
+        <div class="signature-name">Signature</div>
+        
+        <div class="date-line"></div>
+        <div class="date-text">Date</div>
+        
+        <div class="signature-name" style="margin-top: 20px;">Phone: <span class="editable" contenteditable="true">____________________________</span></div>
+        <div class="signature-name">Email: <span class="editable" contenteditable="true">____________________________</span></div>
+      </div>
     </div>
   </div>
 </body>
