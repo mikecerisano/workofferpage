@@ -282,14 +282,13 @@
       // Trigger print dialog
       window.print();
       
-      // Show the button again after a short delay (allows print dialog to close)
-      // Use requestAnimationFrame for potentially smoother UI update
+      // Show the button again after a short delay
        requestAnimationFrame(function() {
          setTimeout(function() {
             if (printButton) {
                printButton.style.display = 'block';
             }
-         }, 500); // Slightly reduced delay
+         }, 500); 
        });
     }
   </script>
@@ -357,11 +356,12 @@
         
         <div class="subsection clearfix">
           <div class="subsection-letter">(c)</div>
-          <div class="subsection-content">The engagement period is scheduled for <span class="editable" contenteditable="true">[DATES]</span>.</div>
+          <div class="subsection-content">
+            The specific dates of service ("Scheduled Work Days") covered by this agreement are: <span class="editable" contenteditable="true">[SPECIFIC DATES OF WORK, e.g., May 10-11, 2025]</span>.
+          </div>
         </div>
-      </div>
+        </div>
     </div>
-    
     <div class="section clearfix">
       <div class="section-number">2.</div>
       <div class="section-title">Compensation</div>
@@ -398,7 +398,8 @@
             Overtime: A standard workday is defined as 12 hours. Hours worked by the CREW MEMBER in excess of 12 hours on any single day, when pre-approved in writing by PRODUCTION COMPANY, will be compensated at a fixed hourly rate of $<span class="editable" contenteditable="true">[OVERTIME HOURLY RATE]</span> for each full or partial hour worked beyond the initial 12 hours.
           </div>
         </div>
-        </div> </div> <div class="section clearfix">
+
+      </div> </div> <div class="section clearfix">
       <div class="section-number">3.</div>
       <div class="section-title">Meals and Breaks</div>
       
@@ -552,9 +553,10 @@
       <div class="section-content">
         <div class="subsection clearfix">
           <div class="subsection-letter">(a)</div>
-          <div class="subsection-content">Cancellation by CREW MEMBER with less than <span class="editable" contenteditable="true">[NOTICE PERIOD]</span> notice may result in forfeited compensation.</div>
+          <div class="subsection-content">
+            Should CREW MEMBER become unable to fulfill their duties under this agreement after acceptance, they must notify PRODUCTION COMPANY immediately in writing. Compensation, if any, shall be limited solely to payment for services satisfactorily rendered prior to the time of such notification. PRODUCTION COMPANY is not liable for any other compensation or damages due to CREW MEMBER's withdrawal.
+          </div>
         </div>
-        
         <div class="subsection clearfix">
           <div class="subsection-letter">(b)</div>
           <div class="subsection-content">Production cancellation will result in prorated payment for work completed.</div>
@@ -566,7 +568,6 @@
         </div>
       </div>
     </div>
-      
     <div class="section clearfix">
       <div class="section-number">10.</div>
       <div class="section-title">Insurance and Liability</div>
