@@ -229,6 +229,9 @@
       .editable {
         border-bottom: 1px solid #000;
       }
+      #printButton {
+         display: none; /* Hide print button specifically for printing */
+      }
     }
     
     @media screen and (max-width: 480px) {
@@ -270,21 +273,28 @@
   
   <script>
     function printAsPDF() {
-      // Hide the print button before printing
-      document.getElementById('printButton').style.display = 'none';
+      // Temporarily hide the print button
+      var printButton = document.getElementById('printButton');
+      if (printButton) {
+        printButton.style.display = 'none';
+      }
       
       // Trigger print dialog
       window.print();
       
-      // Show the button again after print dialog is closed
-      setTimeout(function() {
-        document.getElementById('printButton').style.display = 'block';
-      }, 1000);
+      // Show the button again after a short delay (allows print dialog to close)
+      // Use requestAnimationFrame for potentially smoother UI update
+       requestAnimationFrame(function() {
+         setTimeout(function() {
+            if (printButton) {
+               printButton.style.display = 'block';
+            }
+         }, 500); // Slightly reduced delay
+       });
     }
   </script>
 </head>
 <body>
-  <!-- Watermark Logo -->
   <img src="https://raw.githubusercontent.com/mikecerisano/Investor/refs/heads/main/IMG_0069.png" alt="Red Fox Logo Watermark" class="watermark">
   
   <div class="container">
@@ -361,30 +371,34 @@
           <div class="subsection-letter">(a)</div>
           <div class="subsection-content">PRODUCTION COMPANY shall pay CREW MEMBER a flat rate or day rate of $<span class="editable" contenteditable="true">[RATE]</span>.</div>
         </div>
-        
+          
         <div class="subsection clearfix">
           <div class="subsection-letter">(b)</div>
           <div class="subsection-content">Kit Fee (if applicable): $<span class="editable" contenteditable="true">[KIT FEE]</span>.</div>
         </div>
-        
+          
         <div class="subsection clearfix">
           <div class="subsection-letter">(c)</div>
-          <div class="subsection-content">Payment shall be due within <span class="editable" contenteditable="true">[PAYMENT WINDOW]</span> days after completion of services.</div>
+          <div class="subsection-content">Payment shall be due within <span class="editable" contenteditable="true">[PAYMENT WINDOW]</span> days after completion of services and receipt of a valid invoice.</div>
         </div>
-        
+          
         <div class="subsection clearfix">
           <div class="subsection-letter">(d)</div>
           <div class="subsection-content">All reimbursements must be pre-approved in writing by a producer.</div>
         </div>
-        
+          
         <div class="subsection clearfix">
           <div class="subsection-letter">(e)</div>
           <div class="subsection-content">Payments will be made by <span class="editable" contenteditable="true">[PAYMENT METHOD]</span>.</div>
         </div>
-      </div>
-    </div>
-    
-    <div class="section clearfix">
+
+        <div class="subsection clearfix">
+          <div class="subsection-letter">(f)</div>
+          <div class="subsection-content">
+            Overtime: A standard workday is defined as 12 hours. Hours worked by the CREW MEMBER in excess of 12 hours on any single day, when pre-approved in writing by PRODUCTION COMPANY, will be compensated at a fixed hourly rate of $<span class="editable" contenteditable="true">[OVERTIME HOURLY RATE]</span> for each full or partial hour worked beyond the initial 12 hours.
+          </div>
+        </div>
+        </div> </div> <div class="section clearfix">
       <div class="section-number">3.</div>
       <div class="section-title">Meals and Breaks</div>
       
@@ -400,7 +414,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">4.</div>
       <div class="section-title">Responsibilities</div>
@@ -432,7 +446,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">5.</div>
       <div class="section-title">Credits</div>
@@ -454,7 +468,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">6.</div>
       <div class="section-title">Ownership and Work-for-Hire</div>
@@ -476,7 +490,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">7.</div>
       <div class="section-title">Confidentiality</div>
@@ -498,7 +512,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">8.</div>
       <div class="section-title">Conduct and Safety</div>
@@ -530,7 +544,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">9.</div>
       <div class="section-title">Cancellation and Termination</div>
@@ -552,7 +566,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">10.</div>
       <div class="section-title">Insurance and Liability</div>
@@ -574,7 +588,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">11.</div>
       <div class="section-title">Use of Work</div>
@@ -596,7 +610,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">12.</div>
       <div class="section-title">Governing Law</div>
@@ -608,7 +622,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="section clearfix">
       <div class="section-number">13.</div>
       <div class="section-title">Entire Agreement</div>
@@ -620,7 +634,7 @@
         </div>
       </div>
     </div>
-    
+      
     <div class="signature-section">
       <div class="agreement-clause">IN WITNESS WHEREOF the parties have executed this Agreement as of the date first above written.</div>
       
